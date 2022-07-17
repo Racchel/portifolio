@@ -14,7 +14,7 @@ export const NavContainer = styled.nav`
    top: 0;
    z-index: 10;
 
-   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+   @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
       transition: 0.8s all ease;
    }
 
@@ -45,7 +45,7 @@ export const NavLogo = styled(LinkRouter)`
 export const MobileIcon = styled.div`
    display: none;
    
-   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
       display: block;
       position: absolute;
       top: 0;
@@ -64,7 +64,7 @@ export const NavMenu = styled.ul`
    text-align: center;
    margin-right: -22px;
 
-   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
       display: none;
    }
 `
@@ -86,34 +86,5 @@ export const NavLink = styled(LinkScroll)`
 
    &.active {
       border-bottom: 3px solid ${props => props.theme.colors.main};
-   }
-`
-
-export const NavBtn = styled.div`
-   display: flex;
-   align-items: center;
-
-   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
-      display: none;
-   }
-`
-
-export const NavBtnLink = styled.a`
-   border-radius: 50px;
-   background-color: ${props => props.theme.colors.main};
-   white-space: nowrap;
-   padding: 10px 22px;
-   color: ${props => props.theme.colors.white};
-   font-size: 1rem;
-   outline: none;
-   border: none;
-   cursor: pointer;
-   text-decoration: none;
-   transition: all 0.2s ease-in-out;
-
-   &:hover {
-      transition: all 0.2s ease-in-out;
-      background-color: ${props => props.theme.colors.mainLight};
-      color: ${props => props.theme.colors.white};
    }
 `

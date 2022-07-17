@@ -4,8 +4,9 @@ const fonts = {
 }
 
 const breakpoints = {
-   md: '960px',
-   sm: '768px'
+   lg: '960px',
+   md: '768px',
+   sm: '480px'
 }
 
 const themeColors = {
