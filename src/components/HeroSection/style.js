@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md'
 
 export const HeroContainer = styled.div`
-   background-color: ${props => props.theme.colors.background};
+   background-color: ${props => props.theme.colors.background.md};
    display: flex;
    justify-content: center;
    align-items: center;
@@ -34,8 +34,8 @@ export const HeroBg = styled.div`
       z-index: 2;
       background: linear-gradient(
          180deg,
-         ${(props) => props.theme.colors.lowOpacity} 0%,
-         ${(props) => props.theme.colors.highOpacity} 100%
+         ${(props) => props.theme.colors.opacity.low} 0%,
+         ${(props) => props.theme.colors.opacity.high} 100%
       )
    }
 `
@@ -45,7 +45,7 @@ export const VideoBg = styled.video`
    height: 100%;
    -o-object-fit: cover;
    object-fit: cover;
-   background-color: ${(props) => props.theme.colors.main};
+   background-color: ${(props) => props.theme.colors.primary.md};
 `
 
 export const HeroContent = styled.div`

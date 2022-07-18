@@ -13,7 +13,7 @@ export const SideBarContainer = styled.aside`
    top: 0;
    left: 0;
    z-index: 999;
-   background-color: ${props => props.theme.colors.background};
+   background-color: ${props => props.theme.colors.background.md};
    transition: 0.3s ease-in-out;
    opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
    top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
@@ -30,11 +30,11 @@ export const Icon = styled.div`
 `
 
 export const CloseIcon = styled(FaTimes)`
-   color: ${props => props.theme.colors.text};
+   color: ${props => props.theme.colors.text.md};
 `
 
 export const SidebarWrapper = styled.div`
-   color: ${props => props.theme.colors.text};
+   color: ${props => props.theme.colors.text.md};
 `
 
 export const SidebarMenu = styled.ul`
@@ -57,11 +57,11 @@ export const SidebarLink = styled(LinkScroll)`
    list-style: none;
    transition: 0.2s ease-in-out;
    text-decoration: none;
-   color: ${props => props.theme.colors.text};
+   color: ${props => props.theme.colors.text.md};
    cursor: pointer;
 
    &:hover {
-      color: ${props => props.theme.colors.mainLight};
+      color: ${props => props.theme.colors.primary.sm};
       transition: 0.2s ease-in-out;
    }
 `

@@ -13,6 +13,6 @@ export const SocialMediaContainer = styled.div`
 export const SocialMediaLink = styled.a`
    padding: 5px;
    font-size: ${(props) => props.bigFont ? '3rem' : '2rem'};
-   color: ${props => props.theme.colors.text};
+   color: ${props => props.theme.colors.text.md};
 `
 

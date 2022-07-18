@@ -16,9 +16,9 @@ export const ThemeButton = styled.button`
    z-index: 999;
    font-size: 1rem;
    cursor: pointer;
-   color: ${props => props.theme.colors.text};
-   background-color: ${props => props.theme.colors.background};
-   box-shadow: ${props => props.theme.colors.lowOpacity} 0px 2px 8px 0px;
+   color: ${props => props.theme.colors.text.md};
+   background-color: ${props => props.theme.colors.background.md};
+   box-shadow: ${props => props.theme.colors.opacity.low} 0px 2px 8px 0px;
 
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
       display: ${(props) => props.desktop ? 'none' : 'flex'};
