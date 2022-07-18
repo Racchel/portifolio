@@ -1,5 +1,5 @@
 import * as S from './style'
-import { NavBar, SideBar } from '../../components'
+import { NavBar, SideBar, ThemeButton } from '../../components'
 import { useState } from 'react'
 
 export const Layout = ({ title, children }) => {
@@ -10,10 +10,13 @@ export const Layout = ({ title, children }) => {
    }
 
    return (
-      <S.Container>
-         <NavBar toggle={toggle} />
-         <SideBar isOpen={isOpen} toggle={toggle} />
-         {children}
-      </S.Container>
+      <>
+         <S.Container>
+            <NavBar toggle={toggle} />
+            <SideBar isOpen={isOpen} toggle={toggle} />
+            {children}
+         </S.Container>
+         <ThemeButton />
+      </>
    )
 }

@@ -6,6 +6,7 @@ export const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
    const [theme, setTheme] = useState(AppTheme.dark)
+   const [themeName, setThemeName] = useState('dark')
 
    const navigationListLinks = [
       { title: 'sobre', to: 'about' },
@@ -16,10 +17,11 @@ export const AppContextProvider = ({ children }) => {
 
    function toggleTheme() {
       theme === AppTheme.light ? setTheme(AppTheme.dark) : setTheme(AppTheme.light)
+      themeName === 'light' ? setThemeName('dark') : setThemeName('light')
    }
 
    return (
-      <AppContext.Provider value={{ toggleTheme, navigationListLinks }}>
+      <AppContext.Provider value={{ themeName, toggleTheme, navigationListLinks }}>
          <ThemeProvider theme={theme}>
             {children}
          </ThemeProvider>
