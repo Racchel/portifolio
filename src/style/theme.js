@@ -27,7 +27,8 @@ export const AppTheme = {
       colors: {
          background: themeColors.light,
          text: themeColors.dark,
-         opacity: 'rgba(255, 255, 255, 0.2)',
+         lowOpacity: 'rgba(255, 255, 255, 0.1)',
+         highOpacity: 'rgba(255, 255, 255, 0.4)',
          ...colorPalette
       },
       breakpoints,
@@ -37,7 +38,8 @@ export const AppTheme = {
       colors: {
          background: themeColors.dark,
          text: themeColors.light,
-         opacity: 'rgba(0, 0, 0, 0.2)',
+         lowOpacity: 'rgba(0, 0, 0, 0.1)',
+         highOpacity: 'rgba(0, 0, 0, 1)',
          ...colorPalette
       },
       breakpoints,
