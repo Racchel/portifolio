@@ -1,6 +1,6 @@
 const fonts = {
    default: 'Encode Sans Expanded',
-   secondary: '',
+   secondary: 'Pacifico',
 }
 
 const breakpoints = {
@@ -11,7 +11,7 @@ const breakpoints = {
 
 const themeColors = {
    basic: {
-      xs: '#FAFAFA',
+      xs: '#F2F2F2',
       sm: '#E0E0E0',
       md: '#9E9E9E',
       lg: '#212121',
@@ -24,7 +24,7 @@ const themeColors = {
    },
    opacity1: {
       low: 'rgba(255, 255, 255, 0.1)',
-      high: 'rgba(255, 255, 255, 0.4)',
+      high: 'rgba(72,66,179, 0.2)',
    },
    opacity2: {
       low: 'rgba(0, 0, 0, 0.1)',
