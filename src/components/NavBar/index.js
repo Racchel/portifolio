@@ -17,9 +17,8 @@ export const NavBar = ({ toggle }) => {
                   </S.MobileIcon>
                   <S.NavMenu>
                      {context.navigationListLinks.map((link, index) => (
-                        <S.NavItem>
+                        <S.NavItem key={index}>
                            <S.NavLink
-                              key={index}
                               to={link.to}
                               smooth={true}
                               duration={500}

@@ -9,8 +9,11 @@ export const SocialMediaSection = ({ navbar, bigFont }) => {
 
    return (
       <S.SocialMediaContainer navbar={navbar}>
-         {sociaMediaLinkList.map(link => (
-            <S.SocialMediaLink href={link.href} bigFont={bigFont}>
+         {sociaMediaLinkList.map((link, index) => (
+            <S.SocialMediaLink
+               key={index}
+               href={link.href}
+               bigFont={bigFont}>
                {link.icon}
             </S.SocialMediaLink>
          ))}
