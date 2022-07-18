@@ -7,7 +7,7 @@ const pt = {
 }
 
 const en = {
-   title: 'You are the change the world needs!',
+   title: 'You\'re the change the world needs!',
    paragraph: `My portfolio ${assets.icons.heart}`,
    buttonLabel: 'Know more'
 }

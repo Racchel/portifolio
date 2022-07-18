@@ -1,5 +1,6 @@
 import * as S from './style'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { LanguageSelector } from '..'
 
 export const SocialMediaSection = ({ navbar, bigFont }) => {
    const sociaMediaLinkList = [
@@ -17,6 +18,7 @@ export const SocialMediaSection = ({ navbar, bigFont }) => {
                {link.icon}
             </S.SocialMediaLink>
          ))}
+         <LanguageSelector />
       </S.SocialMediaContainer>
    )
 }

@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { AppTheme } from '../../style'
 import { Data } from '../data'
@@ -12,16 +12,20 @@ export const AppContextProvider = ({ children }) => {
    const [data, setData] = useState(Data.pt)
    const [language, setLanguage] = useState('pt')
 
-
-   function toggleLanguage() {
-      if (language === 'pt') {
-         setLanguage('en')
-         setData(Data.en)
-      } else {
-         setLanguage('pt')
-         setData(Data.pt)
+   useEffect(() => {
+      switch (language) {
+         case 'pt':
+            setData(Data.pt)
+            break;
+         case 'en':
+            setData(Data.en)
+            break;
+         default:
+            setData(Data.pt)
       }
-   }
+      console.log('entrou aqui no useEffect')
+
+   }, [language])
 
 
    function toggleTheme() {
@@ -32,7 +36,7 @@ export const AppContextProvider = ({ children }) => {
    return (
       <AppContext.Provider value={{
          themeName, toggleTheme,
-         language, toggleLanguage,
+         language, setLanguage,
          navigationListLinks: data.navigationListLinks,
          heroSectionData: data.heroSection,
          infoSectionData: data.infoSection
