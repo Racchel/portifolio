@@ -17,7 +17,17 @@ export const NavBar = ({ toggle }) => {
                   <S.NavMenu>
                      {context.navigationListLinks.map((link, index) => (
                         <S.NavItem>
-                           <S.NavLink key={index} to={link.to}>{link.title}</S.NavLink>
+                           <S.NavLink
+                              key={index}
+                              to={link.to}
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              exact='true'
+                              offset={-80}
+                           >
+                              {link.title}
+                           </S.NavLink>
                         </S.NavItem>
                      ))}
                   </S.NavMenu>

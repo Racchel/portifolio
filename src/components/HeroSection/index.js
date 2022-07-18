@@ -20,6 +20,7 @@ export const HeroSection = () => {
             <S.HeroP>{paragraph}</S.HeroP>
             <S.HeroBtnWrapper to='about'>
                <Button
+                  to='about'
                   primary
                   onHover={onHover}
                >  Saiba mais sobre
