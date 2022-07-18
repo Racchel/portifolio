@@ -1,1 +1,5 @@
-export const assets = {}
+import { videos } from './videos'
+
+export const assets = {
+   videos
+}
