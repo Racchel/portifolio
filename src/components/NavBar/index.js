@@ -1,7 +1,7 @@
 import * as S from './style'
 import { FaBars } from 'react-icons/fa'
 import { AppContext } from '../../share'
-import { SocialMediaSection } from '../SocialMediaSection'
+import { SocialMediaSection } from '..'
 
 export const NavBar = ({ toggle }) => {
    const title = 'racchel.velasco'

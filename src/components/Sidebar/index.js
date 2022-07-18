@@ -1,7 +1,6 @@
 import * as S from './style'
 import { AppContext } from '../../share'
-import { SocialMediaSection } from '../SocialMediaSection'
-import { ThemeButton } from '../ThemeButton'
+import { ThemeButton, SocialMediaSection } from '..'
 
 export const SideBar = ({ isOpen, toggle }) => {
 
