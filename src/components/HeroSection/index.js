@@ -1,6 +1,7 @@
 import * as S from './style'
 import { assets } from '../../assets'
 import { useState } from 'react'
+import { Button } from '../Button'
 
 export const HeroSection = () => {
    const title = 'Você é a mudança que o mundo precisa'
@@ -18,12 +19,12 @@ export const HeroSection = () => {
             <S.HeroH1>{title}</S.HeroH1>
             <S.HeroP>{paragraph}</S.HeroP>
             <S.HeroBtnWrapper to='about'>
-               <S.Button
-                  onMouseEnter={onHover}
-                  onMouseLeave={onHover}
-               >
+               <Button
+                  primary
+                  onHover={onHover}
+               >  Saiba mais sobre
                   {hover ? <S.ArrowForward /> : <S.ArrowRight />}
-               </S.Button>
+               </Button>
             </S.HeroBtnWrapper>
          </S.HeroContent>
       </S.HeroContainer>
