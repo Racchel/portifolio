@@ -4,13 +4,14 @@ import { AppContext } from '../../share'
 import { SocialMediaSection } from '../SocialMediaSection'
 
 export const NavBar = ({ toggle }) => {
+   const title = 'racchel.velasco'
 
    return (
       <AppContext.Consumer>
          {(context => (
             <S.NavContainer>
                <S.NavContent>
-                  <S.NavLogo to='/'>racchel</S.NavLogo>
+                  <S.NavLogo to='/'>{title}</S.NavLogo>
                   <S.MobileIcon onClick={toggle}>
                      <FaBars />
                   </S.MobileIcon>

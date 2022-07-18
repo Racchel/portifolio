@@ -11,7 +11,7 @@ const one = {
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
    buttonLabel: 'Vamo ver',
    imgStart: false,
-   img: assets.images.woman,
+   img: assets.images.racchel,
    alt: 'Imagem de mulher'
 }
 

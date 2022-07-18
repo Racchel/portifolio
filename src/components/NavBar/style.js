@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { assets } from '../../assets'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
@@ -13,6 +14,7 @@ export const NavContainer = styled.nav`
    position: sticky;
    top: 0;
    z-index: 10;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
    @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
       transition: 0.8s all ease;
@@ -35,11 +37,19 @@ export const NavLogo = styled(LinkRouter)`
    display: flex;
    justify-self: flex-start;
    align-items: center;
-   font-size: 1.5rem;
+   font-size: 2rem;
    margin-left: 24px;
-   font-weight: bold;
    text-decoration: none;
+   font-family: ${props => props.theme.fonts.secondary};
    cursor: pointer;
+
+
+   ::after {
+      position: relative;
+      content: '${assets.icons.heart}';
+      font-size: 1rem;
+      transform: rotate(30deg);
+   }
 `
 
 export const MobileIcon = styled.div`

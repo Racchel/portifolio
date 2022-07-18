@@ -4,8 +4,9 @@ import { useState } from 'react'
 import { Button } from '../Button'
 
 export const HeroSection = () => {
-   const title = 'Você é a mudança que o mundo precisa'
-   const paragraph = 'testeee'
+   const title = 'Você é a mudança que o mundo precisa!'
+   const paragraph = `Meu portifólio ${assets.icons.heart}`
+   const buttonLabel = 'Saiba mais'
 
    const [hover, setHover] = useState(false)
    const onHover = () => setHover(!hover)
@@ -23,7 +24,7 @@ export const HeroSection = () => {
                   to='about'
                   primary
                   onHover={onHover}
-               >  Saiba mais sobre
+               >  {buttonLabel}
                   {hover ? <S.ArrowForward /> : <S.ArrowRight />}
                </Button>
             </S.HeroBtnWrapper>
