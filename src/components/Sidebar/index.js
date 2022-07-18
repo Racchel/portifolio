@@ -13,8 +13,8 @@ export const SideBar = ({ isOpen, toggle }) => {
                </S.Icon>
                <S.SidebarWrapper>
                   <S.SidebarMenu>
-                     {context.navigationListLinks.map(link => (
-                        <S.SidebarLink to={link.to}>{link.title}</S.SidebarLink>
+                     {context.navigationListLinks.map((link, index) => (
+                        <S.SidebarLink key={index} to={link.to}>{link.title}</S.SidebarLink>
                      ))}
                   </S.SidebarMenu>
 

@@ -15,9 +15,9 @@ export const NavBar = ({ toggle }) => {
                      <FaBars />
                   </S.MobileIcon>
                   <S.NavMenu>
-                     {context.navigationListLinks.map(link => (
+                     {context.navigationListLinks.map((link, index) => (
                         <S.NavItem>
-                           <S.NavLink to={link.to}>{link.title}</S.NavLink>
+                           <S.NavLink key={index} to={link.to}>{link.title}</S.NavLink>
                         </S.NavItem>
                      ))}
                   </S.NavMenu>
