@@ -7,8 +7,6 @@ export const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
    const [theme, setTheme] = useState(AppTheme.dark)
-   const [themeName, setThemeName] = useState('dark')
-
    const [data, setData] = useState(Data.pt)
    const [language, setLanguage] = useState('pt')
 
@@ -23,23 +21,22 @@ export const AppContextProvider = ({ children }) => {
          default:
             setData(Data.pt)
       }
-      console.log('entrou aqui no useEffect')
 
    }, [language])
 
 
    function toggleTheme() {
       theme === AppTheme.light ? setTheme(AppTheme.dark) : setTheme(AppTheme.light)
-      themeName === 'light' ? setThemeName('dark') : setThemeName('light')
    }
 
    return (
       <AppContext.Provider value={{
-         themeName, toggleTheme,
+         theme, toggleTheme,
          language, setLanguage,
          navigationListLinks: data.navigationListLinks,
          heroSectionData: data.heroSection,
-         infoSectionData: data.infoSection
+         infoSectionData: data.infoSection,
+         themeName: theme === AppTheme.light ? data.theme.light : data.theme.dark
 
       }}>
          <ThemeProvider theme={theme}>

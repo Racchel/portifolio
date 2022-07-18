@@ -8,9 +8,8 @@ export const ThemeButton = ({ desktop }) => {
       <AppContext.Consumer>
          {(context => (
             <S.ThemeButton onClick={context.toggleTheme} desktop={desktop}>
-               {context.themeName} mode
+               {context.themeName}
                <S.ArrowsExchange />
-
             </S.ThemeButton>
          ))}
       </AppContext.Consumer>
