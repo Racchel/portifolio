@@ -1,6 +1,6 @@
 import * as S from './style'
 import { AppContext } from '../../share'
-import { Button } from '../Button'
+import { SocialMediaSection } from '../SocialMediaSection'
 
 export const SideBar = ({ isOpen, toggle }) => {
 
@@ -18,7 +18,7 @@ export const SideBar = ({ isOpen, toggle }) => {
                      ))}
                   </S.SidebarMenu>
 
-                  <Button />
+                  <SocialMediaSection bigFont />
                </S.SidebarWrapper>
             </S.SideBarContainer>
          )}

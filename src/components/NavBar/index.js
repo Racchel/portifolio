@@ -1,7 +1,7 @@
 import * as S from './style'
 import { FaBars } from 'react-icons/fa'
 import { AppContext } from '../../share'
-import { Button } from '../Button'
+import { SocialMediaSection } from '../SocialMediaSection'
 
 export const NavBar = ({ toggle }) => {
 
@@ -21,7 +21,7 @@ export const NavBar = ({ toggle }) => {
                         </S.NavItem>
                      ))}
                   </S.NavMenu>
-                  <Button navbar />
+                  <SocialMediaSection navbar />
                </S.NavContent>
             </S.NavContainer>
          ))}
