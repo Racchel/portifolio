@@ -18,7 +18,8 @@ const colorPalette = {
    mainLight: '#2929ab',
    main: '#191970',
    mainDark: '#0c0c38',
-   white: '#fff'
+   white: '#fff',
+   black: '#0d0d0d',
 }
 
 export const AppTheme = {

@@ -1,32 +1,37 @@
 import styled from 'styled-components'
+import { Link as LinkScroll } from 'react-scroll'
 
-export const ButtonContainer = styled.div`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-      display: ${(props) => props.navbar ? 'none' : 'block'};
-   }
-`
-
-export const ButtonLink = styled.a`
+export const ButtonContainer = styled(LinkScroll)`
    border-radius: 50px;
    white-space: nowrap;
-   font-size: 1rem;
+   background-color: ${(props) => props.primary
+      ? props.theme.colors.main
+      : props.theme.colors.background};
+   color: ${(props) => props.primary
+      ? props.theme.colors.white
+      : props.theme.colors.text};
+   padding: ${(props) => props.big
+      ? '14px 48px'
+      : '12px 30px'};
+   font-size: ${(props) => props.big
+      ? '1.25rem'
+      : '1rem'};
    outline: none;
    border: none;
    cursor: pointer;
-   text-decoration: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    transition: all 0.2s ease-in-out;
-   padding: ${(props) => props.navbar ? '10px 22px' : '16px 64px'};
-   color: ${props => props.theme.colors.white};
-   background-color: ${props => props.theme.colors.main};
 
    &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${props => props.theme.colors.white};
-      background-color: ${props => props.theme.colors.mainLight};
+      background-color: ${(props) => props.primary
+      ? props.theme.colors.white
+      : props.theme.colors.text};
+      color: ${(props) => props.primary
+      ? props.theme.colors.black
+      : props.theme.colors.background};
    }
 `
 
