@@ -26,12 +26,8 @@ export const ButtonContainer = styled(LinkScroll)`
 
    &:hover {
       transition: all 0.2s ease-in-out;
-      background-color: ${(props) => props.primary
-      ? props.theme.colors.white
-      : props.theme.colors.text};
-      color: ${(props) => props.primary
-      ? props.theme.colors.black
-      : props.theme.colors.background};
+      background-color: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.text};
    }
 `
 
