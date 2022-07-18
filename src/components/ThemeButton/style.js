@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { CgArrowsExchangeAlt } from 'react-icons/cg'
 
 export const ThemeButton = styled.button`
-   width: 130px;
+   width: 135px;
    padding: 5px;
    border-radius: 50px;
    display: flex;
@@ -15,9 +15,14 @@ export const ThemeButton = styled.button`
    right: 1rem;
    z-index: 999;
    font-size: 1rem;
+   cursor: pointer;
    color: ${props => props.theme.colors.text};
    background-color: ${props => props.theme.colors.background};
    box-shadow: ${props => props.theme.colors.opacity} 0px 2px 8px 0px;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+      display: ${(props) => props.desktop ? 'none' : 'flex'};
+   }
 `
 
 export const ArrowsExchange = styled(CgArrowsExchangeAlt)`

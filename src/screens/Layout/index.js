@@ -16,7 +16,7 @@ export const Layout = ({ title, children }) => {
             <SideBar isOpen={isOpen} toggle={toggle} />
             {children}
          </S.Container>
-         <ThemeButton />
+         <ThemeButton desktop />
       </>
    )
 }
