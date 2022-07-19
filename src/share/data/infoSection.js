@@ -15,7 +15,7 @@ const ptOne = {
    buttonLabel: 'Vamo ver',
    imgStart: false,
    img: assets.images.racchel,
-   alt: 'Imagem de mulher'
+   alt: 'Foto da autora'
 }
 
 
@@ -31,7 +31,7 @@ const ptTwo = {
    buttonLabel: 'Vamo ver',
    imgStart: true,
    img: assets.images.projects,
-   alt: 'Imagem de mulher',
+   alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
 }
 
 
@@ -47,7 +47,7 @@ const ptThree = {
    buttonLabel: 'Vamo ver',
    imgStart: false,
    img: assets.images.blog,
-   alt: 'Imagem de mulher',
+   alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
 }
 
 /** ingles */
@@ -64,7 +64,7 @@ const enOne = {
    buttonLabel: 'Vamo ver',
    imgStart: false,
    img: assets.images.racchel,
-   alt: 'Imagem de mulher'
+   alt: 'Foto da autora'
 }
 
 
@@ -80,7 +80,7 @@ const enTwo = {
    buttonLabel: 'Vamo ver',
    imgStart: true,
    img: assets.images.projects,
-   alt: 'Imagem de mulher',
+   alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
 }
 
 
@@ -96,7 +96,7 @@ const enThree = {
    buttonLabel: 'Vamo ver',
    imgStart: false,
    img: assets.images.blog,
-   alt: 'Imagem de mulher',
+   alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
 }
 
 
