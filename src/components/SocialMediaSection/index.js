@@ -2,14 +2,14 @@ import * as S from './style'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { LanguageSelector } from '..'
 
-export const SocialMediaSection = ({ navbar, bigFont }) => {
+export const SocialMediaSection = ({ desktop, bigFont }) => {
    const sociaMediaLinkList = [
       { title: 'Github', href: 'https://github.com/Racchel', icon: <AiFillGithub /> },
       { title: 'Linkedin', href: 'https://www.linkedin.com/in/racchel-velasco', icon: <AiFillLinkedin /> }
    ]
 
    return (
-      <S.SocialMediaContainer navbar={navbar}>
+      <S.SocialMediaContainer desktop={desktop}>
          {sociaMediaLinkList.map((link, index) => (
             <S.SocialMediaLink
                key={index}
@@ -18,7 +18,7 @@ export const SocialMediaSection = ({ navbar, bigFont }) => {
                {link.icon}
             </S.SocialMediaLink>
          ))}
-         <LanguageSelector />
+         <LanguageSelector desktop />
       </S.SocialMediaContainer>
    )
 }

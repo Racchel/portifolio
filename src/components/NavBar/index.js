@@ -31,7 +31,7 @@ export const NavBar = ({ toggle }) => {
                         </S.NavItem>
                      ))}
                   </S.NavMenu>
-                  <SocialMediaSection navbar />
+                  <SocialMediaSection desktop />
                </S.NavContent>
             </S.NavContainer>
          ))}

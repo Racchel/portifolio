@@ -4,14 +4,17 @@ export const SocialMediaContainer = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 10px;
+   gap: 15px;
+
+   display: ${(props) => props.desktop ? 'flex' : 'none'};
 
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-      display: ${(props) => props.navbar ? 'none' : 'block'};
+      display: ${(props) => props.desktop ? 'none' : 'flex'};
    }
 `
 
 export const SocialMediaLink = styled.a`
+   width: fit-content;
    display: flex;
    align-items: center;
    justify-content: center;

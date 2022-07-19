@@ -1,6 +1,6 @@
 import * as S from './style'
 import { AppContext } from '../../share'
-import { ThemeButton, SocialMediaSection } from '..'
+import { ThemeButton, SocialMediaSection, LanguageSelector } from '..'
 
 export const SideBar = ({ isOpen, toggle }) => {
 
@@ -12,6 +12,8 @@ export const SideBar = ({ isOpen, toggle }) => {
                   <S.CloseIcon />
                </S.Icon>
                <S.SidebarWrapper>
+
+                  <LanguageSelector />
                   <S.SidebarMenu>
                      {context.navigationListLinks.map((link, index) => (
                         <S.SidebarLink
