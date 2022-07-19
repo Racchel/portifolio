@@ -58,6 +58,13 @@ export const HeroContent = styled.div`
    align-items: center;
 `
 
+
+export const HeroSubtitle = styled.span`
+   font-size: 12px;
+   color: ${(props) => props.theme.colors.white};
+   font-style: italic;
+`
+
 export const HeroH1 = styled.h1`
    font-size: 3rem;
    justify-content: center;
