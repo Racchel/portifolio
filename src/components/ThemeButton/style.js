@@ -8,7 +8,6 @@ export const ThemeButton = styled.button`
    display: flex;
    justify-content: space-evenly;
    align-items: center;
-   border: none;
    align-self: center;
    position: fixed;
    bottom: 1rem;
@@ -16,6 +15,7 @@ export const ThemeButton = styled.button`
    z-index: 999;
    font-size: 1rem;
    cursor: pointer;
+   border: 2px solid ${props => props.theme.colors.primary.md};
    color: ${props => props.theme.colors.text.md};
    background-color: ${props => props.theme.colors.background.md};
    box-shadow: ${props => props.theme.colors.opacity.low} 0px 2px 8px 0px;
