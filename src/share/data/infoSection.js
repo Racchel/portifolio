@@ -2,107 +2,123 @@
 import { assets } from '../../assets'
 
 
-/** portugues */
-const ptAbout = {
-   id: 'about',
-   light: false,
-   topLine: 'ainda não sei',
-   headLine: 'Sobre mim',
-   description: `is simply dummy text of the printing and typesetting industry. 
+const textualDataPT = [
+   {
+      id: 'about',
+      topLine: 'ainda não sei',
+      headLine: 'Sobre mim',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: false,
-   img: assets.images.racchel,
-   alt: 'Foto da autora'
-}
-
-
-const ptProjects = {
-   id: 'projects',
-   light: true,
-   topLine: 'ainda não sei',
-   headLine: 'Meus projetos',
-   description: `is simply dummy text of the printing and typesetting industry. 
+      alt: 'Foto da autora'
+   },
+   {
+      id: 'projects',
+      topLine: 'ainda não sei',
+      headLine: 'Meus projetos',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: true,
-   img: assets.images.projects,
-   alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
-}
-
-
-const ptBlog = {
-   id: 'blog',
-   light: false,
-   topLine: 'ainda não sei',
-   headLine: 'Meu blog',
-   description: `is simply dummy text of the printing and typesetting industry. 
+      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
+   },
+   {
+      id: 'blog',
+      topLine: 'ainda não sei',
+      headLine: 'Meu blog',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: false,
-   img: assets.images.blog,
-   alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
-}
+      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
+   }
+]
 
-/** ingles */
-
-const enAbout = {
-   id: 'about',
-   light: false,
-   topLine: 'ainda não sei',
-   headLine: 'About me',
-   description: `is simply dummy text of the printing and typesetting industry. 
+const textualDataEn = [
+   {
+      id: 'about',
+      topLine: 'ainda não sei',
+      headLine: 'About me',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: false,
-   img: assets.images.racchel,
-   alt: 'Foto da autora'
-}
-
-
-const enProjects = {
-   id: 'projects',
-   light: true,
-   topLine: 'ainda não sei',
-   headLine: 'My projects',
-   description: `is simply dummy text of the printing and typesetting industry. 
+      alt: 'Foto da autora'
+   },
+   {
+      id: 'projects',
+      topLine: 'ainda não sei',
+      headLine: 'My projects',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: true,
-   img: assets.images.projects,
-   alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
-}
-
-
-const enBlog = {
-   id: 'blog',
-   light: false,
-   topLine: 'ainda não sei',
-   headLine: 'My blog',
-   description: `is simply dummy text of the printing and typesetting industry. 
+      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
+   },
+   {
+      id: 'blog',
+      topLine: 'ainda não sei',
+      headLine: 'My blog',
+      description: `is simply dummy text of the printing and typesetting industry. 
    has been the industry's standard dummy text ever since the 1500s, 
    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
    It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-   imgStart: false,
-   img: assets.images.blog,
-   alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
+      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
+   }
+]
+
+const commonData = [
+   {
+      id: 'about',
+      light: false,
+      imgStart: false,
+      img: assets.images.racchel,
+   },
+   {
+      id: 'projects',
+      light: true,
+      imgStart: true,
+      img: assets.images.projects,
+   },
+   {
+      id: 'blog',
+      light: false,
+      imgStart: false,
+      img: assets.images.blog,
+   }
+]
+
+function createObjectByLanguage(arrayOfTextualDataByLanguage, commonDataArray) {
+
+   return arrayOfTextualDataByLanguage.map(textualData => {
+      let commonDataIndex = commonDataArray.findIndex(item => item.id === textualData.id)
+
+      return {
+         id: textualData.id,
+         topLine: textualData.topLine,
+         headLine: textualData.headLine,
+         description: textualData.description,
+         img: commonDataArray[commonDataIndex].img,
+         alt: textualData.alt,
+         imgStart: commonDataArray[commonDataIndex].imgStart,
+         light: commonDataArray[commonDataIndex].light,
+      }
+   })
 }
 
+const dataPT = createObjectByLanguage(textualDataPT, commonData)
+const dataEn = createObjectByLanguage(textualDataEn, commonData)
 
 export const infoSection = {
    pt: {
-      about: ptAbout,
-      projects: ptProjects,
-      blog: ptBlog
+      about: dataPT.find(item => item.id === 'about'),
+      projects: dataPT.find(item => item.id === 'projects'),
+      blog: dataPT.find(item => item.id === 'blog')
    },
    en: {
-      about: enAbout,
-      projects: enProjects,
-      blog: enBlog
+      about: dataEn.find(item => item.id === 'about'),
+      projects: dataEn.find(item => item.id === 'projects'),
+      blog: dataEn.find(item => item.id === 'blog')
    },
 }
