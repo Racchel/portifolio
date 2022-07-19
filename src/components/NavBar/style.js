@@ -6,7 +6,6 @@ import { Link as LinkScroll } from 'react-scroll'
 export const NavContainer = styled.nav`
    background-color: ${props => props.theme.colors.background.md};
    height: 80px;
-   /* margin-top: -80px; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -38,11 +37,13 @@ export const NavLogo = styled(LinkRouter)`
    justify-self: flex-start;
    align-items: center;
    font-size: 2rem;
-   margin-left: 24px;
    text-decoration: none;
    font-family: ${props => props.theme.fonts.secondary};
    cursor: pointer;
 
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      font-size: 1.5rem;
+   }
 
    ::after {
       position: relative;
@@ -56,14 +57,16 @@ export const MobileIcon = styled.div`
    display: none;
    
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 1.8rem;
       color: ${props => props.theme.colors.text.md};
       cursor: pointer;
+   }
+
+      @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      font-size: 1.5rem;
    }
 `
 
