@@ -1,20 +1,20 @@
 import * as S from './style'
-import { assets } from '../../assets'
+import { AppContext } from '../../share'
 
 export const Footer = () => {
 
-   const title = `Feito com ${assets.icons.heart} por`
-   const author = 'Racchel Velasco'
-   const date = 'Julho de 2022'
-
    return (
-      <S.FooterContainer>
-         <S.FooterContent>
-            <S.FooterTitle>{title}
-               <S.FooterAuthor>{author}</S.FooterAuthor>
-            </S.FooterTitle>
-            <S.FooterSubtitle>{date}</S.FooterSubtitle>
-         </S.FooterContent>
-      </S.FooterContainer>
+      <AppContext.Consumer>
+         {context => (
+            <S.FooterContainer>
+               <S.FooterContent>
+                  <S.FooterTitle>{context.footerData.title}
+                     <S.FooterAuthor>{context.footerData.author}</S.FooterAuthor>
+                  </S.FooterTitle>
+                  <S.FooterSubtitle>{context.footerData.date}</S.FooterSubtitle>
+               </S.FooterContent>
+            </S.FooterContainer>
+         )}
+      </AppContext.Consumer>
    )
 }

@@ -1,8 +1,9 @@
 import { navigationListLinks } from './navbar'
 import { heroSection } from './heroSection'
 import { infoSection } from './infoSection'
-import { theme } from './theme'
 import { projectsSection } from './projectsSection'
+import { footer } from './footer'
+import { theme } from './theme'
 
 export const Data = {
    pt: {
@@ -10,6 +11,7 @@ export const Data = {
       heroSection: heroSection.pt,
       infoSection: infoSection.pt,
       projectsSection: projectsSection.pt,
+      footer: footer.pt,
       theme: theme.pt,
    },
    en: {
@@ -17,6 +19,7 @@ export const Data = {
       heroSection: heroSection.en,
       infoSection: infoSection.en,
       projectsSection: projectsSection.en,
+      footer: footer.en,
       theme: theme.en,
    }
 }
