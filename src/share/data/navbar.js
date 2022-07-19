@@ -1,11 +1,11 @@
-const pt = [
+const textualDataPT = [
    { title: 'inicio', to: 'home' },
    { title: 'sobre', to: 'about' },
    { title: 'projetos', to: 'projects' },
    { title: 'blog', to: 'blog' }
 ]
 
-const en = [
+const textualDataEn = [
    { title: 'home', to: 'home' },
    { title: 'about', to: 'about' },
    { title: 'projects', to: 'projects' },
@@ -14,6 +14,6 @@ const en = [
 
 
 export const navigationListLinks = {
-   pt,
-   en
+   pt: textualDataPT,
+   en: textualDataEn
 }
