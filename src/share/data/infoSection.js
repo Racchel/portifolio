@@ -5,66 +5,58 @@ import { assets } from '../../assets'
 const textualDataPT = [
    {
       id: 'about',
-      topLine: 'ainda não sei',
+      topLine: 'Saiba mais',
       headLine: 'Sobre mim',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Foto da autora'
+      description: `Oii gente, tudo tranquilo? Eu me chamo Racchel Velasco, sou gaúcha (morando no interior do Amazonas :0), tenho 19 anos e amooo programar. 
+      Hoje, atuo como desenvolvedora Javascript Frontend e Backend, mas estou sempre aprendendo coisas novas. 
+      Enfimmm... sinta-se muito bem-vindo(a) ao meu site! E fica a vontade para entrar em contato!!!`,
+      alt: 'Foto da autora.'
    },
    {
       id: 'projects',
-      topLine: 'ainda não sei',
+      topLine: 'Um pouco sobre',
       headLine: 'Meus projetos',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
+      description: `Logo abaixo, você vai encontrar alguns dos projetos que eu desenvolvi ao longo da minha trajetória como desenvolvedora.
+      Com o tempo, pretendo melhorar esses projetos! E, caso você quiser contribuir comigo, pode mandar um PR lá no meu Github. ;)`,
+      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos.',
    },
    {
       id: 'blog',
-      topLine: 'ainda não sei',
-      headLine: 'Meu blog',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
+      topLine: 'Meu futuro',
+      headLine: 'Blog',
+      description: `Deixei essa seção especialmente separada para falar do meu futuro blog! Este é um projeto que quero fazer faz bastante tempo.
+      Aos poucos, vou construindo e postando vídeos no meu LinkedIn e Instragram sobre o processo de desenvolvimento, passo a passo.
+      Espero que gostem! <3`,
+      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog.',
    }
 ]
 
 const textualDataEn = [
    {
       id: 'about',
-      topLine: 'ainda não sei',
+      topLine: 'Learn more',
       headLine: 'About me',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Foto da autora'
+      description: `Oii gente, tudo tranquilo? Eu me chamo Racchel Velasco, sou gaúcha (morando no interior do Amazonas :0), tenho 19 anos e amooo programar. 
+      Hoje, atuo como desenvolvedora Javascript Frontend e Backend, mas estou sempre aprendendo coisas novas. 
+      Enfimmm... sinta-se muito bem-vindo(a) ao meu site! E fica a vontade para entrar em contato!!!`,
+      alt: 'Foto da autora.'
    },
    {
       id: 'projects',
-      topLine: 'ainda não sei',
+      topLine: 'A little about',
       headLine: 'My projects',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos',
+      description: `Logo abaixo, você vai encontrar alguns dos projetos que eu desenvolvi ao longo da minha trajetória como desenvolvedora.
+      Com o tempo, pretendo melhorar esses projetos! E, caso você quiser contribuir comigo, pode mandar um PR lá no meu Github. ;)`,
+      alt: 'Imagem ilustrativa para representar uma mulher realizando seus projetos.',
    },
    {
       id: 'blog',
-      topLine: 'ainda não sei',
-      headLine: 'My blog',
-      description: `is simply dummy text of the printing and typesetting industry. 
-   has been the industry's standard dummy text ever since the 1500s, 
-   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, remaining `,
-      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog',
+      topLine: 'My future',
+      headLine: 'Blog',
+      description: `Deixei essa seção especialmente separada para falar do meu futuro blog! Este é um projeto que quero fazer faz bastante tempo.
+      Aos poucos, vou construindo e postando vídeos no meu LinkedIn e Instragram sobre o processo de desenvolvimento, passo a passo.
+      Espero que gostem! <3`,
+      alt: 'Imagem ilustrativa para representar uma mulher escrevendo um post para um blog.',
    }
 ]
 
