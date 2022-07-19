@@ -4,7 +4,9 @@ import styled from 'styled-components'
 export const ProjectsContainer = styled.div`
    min-height: 90vh;
    display: flex;
+   justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
    background-color: ${props => props.theme.colors.primary.lg};
    color: ${props => props.theme.colors.white};
 
@@ -15,11 +17,31 @@ export const ProjectsContainer = styled.div`
 
 export const ProjectsContent = styled.div`
    width: 100%;
-   max-width: 1100px;
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
+   max-width: 1200px;
+   padding: 10px;
+   
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      height: 500px;
+      overflow-y: scroll;
+   }
+`
+
+
+export const CarouselContainer = styled.div`
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      display: none;
+   }
+`
+
+export const CardContainer = styled.div`
+   display: none;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 5px;
+   }
 `
 
 export const Card = styled.div`
@@ -34,6 +56,11 @@ export const Card = styled.div`
    flex-direction: column;
    justify-content: space-around;
    text-align: center;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      width: 100%;
+      height: 300px;
+   }
 `
 
 export const CardTitleContent = styled.div``
