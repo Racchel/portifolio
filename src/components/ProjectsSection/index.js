@@ -1,34 +1,18 @@
-import React, { useState } from 'react'
-import * as S from './style'
+import React, { useContext, useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel';
-import { AiFillCalculator, AiFillPlusCircle, AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-import { BsFillStopwatchFill } from 'react-icons/bs'
-import { MdPets } from 'react-icons/md'
-import { ImTarget } from 'react-icons/im'
-import { RiSwordFill } from 'react-icons/ri'
+import { AppContext } from '../../share'
+import * as S from './style'
+
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 export const ProjectsSection = () => {
+   const { projectsSectionData } = useContext(AppContext)
+   const [projectsList, setProjectsList] = useState(projectsSectionData.projects)
 
+   useEffect(() => {
+      setProjectsList(projectsSectionData.projects)
+   }, [projectsSectionData])
 
-   const projects = [
-      { id: 1, onHover: false, icon: <AiFillCalculator />, title: 'Calculadora', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' },
-      { id: 2, onHover: false, icon: <BsFillStopwatchFill />, title: 'Cronômetro', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' },
-      { id: 3, onHover: false, icon: <AiFillPlusCircle />, title: 'Contador', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' },
-      { id: 4, onHover: false, icon: <MdPets />, title: 'PetLove', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' },
-      { id: 5, onHover: false, icon: <ImTarget />, title: 'ODS', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' },
-      { id: 6, onHover: false, icon: <RiSwordFill />, title: 'Star Wars', description: 'is simply dummy text of the printing and typesetting industry. has been the standard dummy text ever since the 1500s', link: '' }
-   ]
-
-   const [projectsList, setProjectsList] = useState(projects)
-
-   const buttonLabel = 'ver projeto'
-
-   const breakpoints = [
-      { width: 1, itemsToShow: 1 },
-      { width: 550, itemsToShow: 2 },
-      { width: 768, itemsToShow: 3 },
-      { width: 1200, itemsToShow: 4 }
-   ]
 
    function toggleOnHover(id) {
       const newProjectsList = [...projectsList]
@@ -38,33 +22,79 @@ export const ProjectsSection = () => {
    }
 
    return (
-      <>
-         <S.ProjectsContainer>
-            <S.ProjectsContent>
-               <Carousel
-                  breakPoints={breakpoints}
-               >
-                  {projectsList.map((project, index) => (
-                     <S.Card key={index}>
+      <S.ProjectsContainer>
+         <S.ProjectsContent>
+            <CustomCarrosel
+               projectsList={projectsList}
+               handleOnHover={toggleOnHover}
+            />
+            <CustomListCards
+               projectsList={projectsList}
+               handleOnHover={toggleOnHover}
+            />
+         </S.ProjectsContent>
+      </S.ProjectsContainer>
+   )
+}
 
-                        <S.CardTitleContent>
-                           {project.icon}
-                           <S.CardTitle>{project.title}</S.CardTitle>
-                        </S.CardTitleContent>
 
-                        <S.CardDescription>{project.description}</S.CardDescription>
-                        <S.CardButton
-                           onMouseEnter={() => toggleOnHover(project.id)}
-                           onMouseLeave={() => toggleOnHover(project.id)}
-                        >
-                           {buttonLabel}
-                           {project.onHover ? <AiFillEye /> : <AiFillEyeInvisible />}
-                        </S.CardButton>
-                     </S.Card>
-                  ))}
-               </Carousel>
-            </S.ProjectsContent>
-         </S.ProjectsContainer>
-      </>
+const CustomCarrosel = ({ projectsList, handleOnHover, }) => {
+
+   const breakpoints = [
+      { width: 1, itemsToShow: 1 },
+      { width: 750, itemsToShow: 2 },
+      { width: 950, itemsToShow: 3 },
+   ]
+
+   return (
+      <S.CarouselContainer>
+         <Carousel
+            breakPoints={breakpoints}
+         >
+            {projectsList.map((project) => (
+               <Card
+                  key={project.id}
+                  project={project}
+                  handleOnHover={handleOnHover}
+               />
+            ))}
+         </Carousel>
+      </S.CarouselContainer>
+   )
+}
+
+const CustomListCards = ({ projectsList, handleOnHover, }) => {
+   return (
+      <S.CardContainer>
+         {projectsList.map((project) => (
+            <Card
+               key={project.id}
+               project={project}
+               handleOnHover={handleOnHover}
+            />
+         ))}
+      </S.CardContainer>
+   )
+}
+
+
+const Card = ({ project, handleOnHover }) => {
+   return (
+      <S.Card key={project.id}>
+
+         <S.CardTitleContent>
+            {project.icon}
+            <S.CardTitle>{project.title}</S.CardTitle>
+         </S.CardTitleContent>
+
+         <S.CardDescription>{project.description}</S.CardDescription>
+         <S.CardButton
+            onMouseEnter={() => handleOnHover(project.id)}
+            onMouseLeave={() => handleOnHover(project.id)}
+         >
+            {project.buttonLabel}
+            {project.onHover ? <AiFillEye /> : <AiFillEyeInvisible />}
+         </S.CardButton>
+      </S.Card>
    )
 }
