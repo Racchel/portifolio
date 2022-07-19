@@ -1,13 +1,11 @@
 import React from 'react'
 import * as S from './style'
-// import { Button } from '../Button'
 
 export const InfoSection = ({
    id, light, imgStart,
    topLine,
    headLine,
    description,
-   buttonLabel,
    img, alt
 }) => {
    return (
@@ -20,9 +18,6 @@ export const InfoSection = ({
                         <S.TopLine>{topLine}</S.TopLine>
                         <S.Heading light={light}>{headLine}</S.Heading>
                         <S.Subtitle light={light}>{description}</S.Subtitle>
-                        {/* <S.BtnContent>
-                           <Button primary to='home'>{buttonLabel}</Button>
-                        </S.BtnContent> */}
                      </S.TextContent>
                   </S.InfoColumn>
                   <S.InfoColumn>
