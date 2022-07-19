@@ -3,7 +3,7 @@ import { assets } from '../../assets'
 
 
 /** portugues */
-const ptOne = {
+const ptAbout = {
    id: 'about',
    light: false,
    topLine: 'ainda não sei',
@@ -18,7 +18,7 @@ const ptOne = {
 }
 
 
-const ptTwo = {
+const ptProjects = {
    id: 'projects',
    light: true,
    topLine: 'ainda não sei',
@@ -33,7 +33,7 @@ const ptTwo = {
 }
 
 
-const ptThree = {
+const ptBlog = {
    id: 'blog',
    light: false,
    topLine: 'ainda não sei',
@@ -49,7 +49,7 @@ const ptThree = {
 
 /** ingles */
 
-const enOne = {
+const enAbout = {
    id: 'about',
    light: false,
    topLine: 'ainda não sei',
@@ -64,7 +64,7 @@ const enOne = {
 }
 
 
-const enTwo = {
+const enProjects = {
    id: 'projects',
    light: true,
    topLine: 'ainda não sei',
@@ -79,7 +79,7 @@ const enTwo = {
 }
 
 
-const enThree = {
+const enBlog = {
    id: 'blog',
    light: false,
    topLine: 'ainda não sei',
@@ -96,13 +96,13 @@ const enThree = {
 
 export const infoSection = {
    pt: {
-      one: ptOne,
-      two: ptTwo,
-      three: ptThree
+      about: ptAbout,
+      projects: ptProjects,
+      blog: ptBlog
    },
    en: {
-      one: enOne,
-      two: enTwo,
-      three: enThree
+      about: enAbout,
+      projects: enProjects,
+      blog: enBlog
    },
 }
