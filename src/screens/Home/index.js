@@ -1,5 +1,5 @@
 import { Layout } from '../Layout'
-import { HeroSection, InfoSection, ProjectsSection } from '../../components'
+import { HeroSection, InfoSection, ProjectsSection, TextCard } from '../../components'
 import { AppContext } from '../../share'
 
 export const Home = () => {
@@ -8,10 +8,16 @@ export const Home = () => {
          {context => (
             <Layout title='Home'>
                <HeroSection />
-               <InfoSection {...context.infoSectionData.about} />
-               <InfoSection {...context.infoSectionData.projects} />
-               <ProjectsSection />
-               <InfoSection {...context.infoSectionData.blog} />
+               <InfoSection id='about'>
+                  <TextCard {...context.infoSectionData.about} />
+               </InfoSection>
+               <InfoSection id='projects' light={true}>
+                  <TextCard {...context.infoSectionData.projects} />
+                  <ProjectsSection />
+               </InfoSection>
+               <InfoSection id='blog'>
+                  <TextCard {...context.infoSectionData.blog} />
+               </InfoSection>
             </Layout>
          )}
       </AppContext.Consumer>
