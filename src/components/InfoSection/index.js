@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './style'
+import { CustomTitle } from '..'
 
 export const InfoSection = ({
    id, light, imgStart,
@@ -16,7 +17,7 @@ export const InfoSection = ({
                   <S.InfoColumn>
                      <S.TextContent>
                         <S.TopLine>{topLine}</S.TopLine>
-                        <S.Heading light={light}>{headLine}</S.Heading>
+                        <CustomTitle light={light} title={headLine} />
                         <S.Subtitle light={light}>{description}</S.Subtitle>
                      </S.TextContent>
                   </S.InfoColumn>
