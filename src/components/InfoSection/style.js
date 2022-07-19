@@ -36,7 +36,7 @@ export const InfoColumn = styled.div`
 
 
 export const TextContent = styled.div`
-   max-width: 540px;
+   max-width: 560px;
    display: flex;
    flex-direction: column;
 
@@ -57,11 +57,11 @@ export const TopLine = styled.p`
    margin-bottom: 1rem;
 `
 
-export const Subtitle = styled.p`
-   max-width: 440px;
+export const InfoDescription = styled.p`
+   max-width: 500px;
    margin-bottom: 35px;
    font-size: 18px;
-   line-height: 24px;
+   line-height: 1.6rem;
    color: ${props => props.light
       ? props.theme.colors.text.sm
       : props.theme.colors.text.md

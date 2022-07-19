@@ -18,7 +18,7 @@ export const InfoSection = ({
                      <S.TextContent>
                         <S.TopLine>{topLine}</S.TopLine>
                         <CustomTitle light={light} title={headLine} />
-                        <S.Subtitle light={light}>{description}</S.Subtitle>
+                        <S.InfoDescription light={light}>{description}</S.InfoDescription>
                      </S.TextContent>
                   </S.InfoColumn>
                   <S.InfoColumn>
