@@ -6,6 +6,10 @@ export const TechContainer = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+      padding-bottom: 80px;
+   }
 `
 
 export const TechContent = styled.div`

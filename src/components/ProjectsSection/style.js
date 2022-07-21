@@ -12,7 +12,7 @@ export const ProjectsContainer = styled.div`
    padding: 10px;
 
    @media screen and (max-width: ${props => props.theme.breakpoints.xl}){
-      padding: 50px 0;
+      padding: 50px 10px;
       border-radius: 0;
    }
 `
@@ -29,4 +29,8 @@ export const ProjectsContent = styled.div`
 
 export const ProjectsDescription = styled.p`
    font-size: 1rem;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+      padding-top: 20px;
+   }
 `
