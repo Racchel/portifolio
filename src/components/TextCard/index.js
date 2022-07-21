@@ -16,7 +16,9 @@ export const TextCard = ({
          <S.TextContent>
             <S.TopLine>{topLine}</S.TopLine>
             <CustomTitle light={light} title={headLine} />
-            <S.InfoDescription light={light}>{description}</S.InfoDescription>
+            {description.map(item => (
+               <S.InfoDescription light={light}>{item}</S.InfoDescription>
+            ))}
          </S.TextContent>
          <S.ImgContent>
             <S.Img src={img} alt={alt} />

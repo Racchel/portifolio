@@ -21,7 +21,7 @@ export const TextContent = styled.div`
 
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
       align-items: center;
-      padding: 30px 60px;
+      padding: 30px 50px;
       text-align: center;
    }
 `
