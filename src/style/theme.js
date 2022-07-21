@@ -4,6 +4,7 @@ const fonts = {
 }
 
 const breakpoints = {
+   xl: '1200',
    lg: '960px',
    md: '768px',
    sm: '480px'

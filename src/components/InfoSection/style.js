@@ -9,9 +9,10 @@ export const InfoContainer = styled.div`
    min-height: 90vh;
    display: flex;
    align-items: center;
+   padding: 50px 0;
 
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-      padding: 100px 0;
+      padding: 0;
    }
 `
 

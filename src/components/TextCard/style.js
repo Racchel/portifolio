@@ -7,6 +7,10 @@ export const TextCardContainer = styled.div`
    justify-content: space-around;
    align-items: center;
    padding: 10px;
+   
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+      padding: 80px 0;
+   }
 `
 
 export const TextContent = styled.div`

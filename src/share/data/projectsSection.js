@@ -4,6 +4,10 @@ import { MdPets } from 'react-icons/md'
 import { ImTarget } from 'react-icons/im'
 import { RiSwordFill } from 'react-icons/ri'
 
+const descriptionPT = 'Alguns dos meus projetinhos :3'
+const descriptionEn = 'Alguns dos meus projetinhos :3'
+
+
 const textualDataPT = [
    { id: 1, title: 'Calculadora', description: '' },
    { id: 2, title: 'Cronômetro', description: '' },
@@ -74,10 +78,12 @@ function createObjectByLanguage(arrayOfTextualDataByLanguage, commonDataArray) {
 
 export const projectsSection = {
    pt: {
-      projects: createObjectByLanguage(textualDataPT, commonData)
+      projects: createObjectByLanguage(textualDataPT, commonData),
+      description: descriptionPT
    },
    en: {
-      projects: createObjectByLanguage(textualDataEn, commonData)
+      projects: createObjectByLanguage(textualDataEn, commonData),
+      description: descriptionEn
    }
 }
 
