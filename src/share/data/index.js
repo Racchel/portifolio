@@ -1,5 +1,6 @@
 import { navigationListLinks } from './navbar'
-import { heroSection } from './heroSection'
+import { homeHeroSection } from './homeHeroSection'
+import { blogHeroSection } from './blogHeroSection'
 import { infoSection } from './infoSection'
 import { projectsSection } from './projectsSection'
 import { footer } from './footer'
@@ -8,7 +9,8 @@ import { theme } from './theme'
 export const Data = {
    pt: {
       navigationListLinks: navigationListLinks.pt,
-      heroSection: heroSection.pt,
+      homeHeroSection: homeHeroSection.pt,
+      blogHeroSection: blogHeroSection.pt,
       infoSection: infoSection.pt,
       projectsSection: projectsSection.pt,
       footer: footer.pt,
@@ -16,7 +18,8 @@ export const Data = {
    },
    en: {
       navigationListLinks: navigationListLinks.en,
-      heroSection: heroSection.en,
+      homeHeroSection: homeHeroSection.en,
+      blogHeroSection: blogHeroSection.en,
       infoSection: infoSection.en,
       projectsSection: projectsSection.en,
       footer: footer.en,

@@ -3,7 +3,7 @@ import {
    Route
 } from 'react-router-dom';
 
-import { Home } from '../screens'
+import { Home, Blog } from '../screens'
 
 export const AppRoutes = () => {
    return (
@@ -11,7 +11,7 @@ export const AppRoutes = () => {
          <Route path='/' element={<Home />} />
          <Route path='/about' element={<p>Sobre</p>} />
          <Route path='/projects' element={<p>Projetos</p>} />
-         <Route path='/blog' element={<p>Blog</p>} />
+         <Route path='/blog' element={<Blog />} />
          <Route path='*' element={<p>Não encontrado</p>} />
       </Routes>
    )

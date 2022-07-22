@@ -17,7 +17,7 @@ const textualDataEn = {
 }
 
 
-export const heroSection = {
+export const homeHeroSection = {
    pt: textualDataPT,
    en: textualDataEn
 }

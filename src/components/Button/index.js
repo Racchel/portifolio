@@ -21,9 +21,22 @@ export const ButtonScroll = ({ to, primary, big, onHover, children }) => {
    )
 }
 
-export const ButtonRouter = ({ to, children }) => {
+export const ButtonRouter = ({
+   primary, to, children,
+   width,
+   widthLg,
+   widthMd,
+   widthSm,
+}) => {
    return (
-      <S.ButtonRouterContainer href={to}>
+      <S.ButtonRouterContainer
+         to={to}
+         primary={primary}
+         width={width}
+         widthLg={widthLg}
+         widthMd={widthMd}
+         widthSm={widthSm}
+      >
          {children}
       </S.ButtonRouterContainer>
    )

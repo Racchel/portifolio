@@ -32,7 +32,41 @@ export const ButtonScrollContainer = styled(LinkScroll)`
    }
 `
 
-export const ButtonRouterContainer = styled(LinkRouter)``
+export const ButtonRouterContainer = styled(LinkRouter)`
+   width: ${props => props.width};
+   background-color: ${(props) => props.primary
+      ? props.theme.colors.primary.md
+      : props.theme.colors.background.md};
+   color: ${(props) => props.primary
+      ? props.theme.colors.white
+      : props.theme.colors.text.md};
+
+   color: ${props => props.theme.colors.white};
+   border: none;
+   padding: 10px;
+   border-radius: 20px;
+   font-size: 1rem;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   text-decoration: none;
+
+   @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
+      width: ${props => props.widthLg};
+   }
+   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+      width: ${props => props.widthMd};
+   }
+   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+      width: ${props => props.widthSm};
+   }
+
+   &:hover {
+      background-color: ${props => props.theme.colors.primary.md};
+   }
+`
 
 export const ButtonExternalLinkContainer = styled.a`
    background-color: ${props => props.theme.colors.black};
