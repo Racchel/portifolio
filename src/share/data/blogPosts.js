@@ -29,11 +29,7 @@ const textualDataEn = [
 const commonData = [
    {
       id: 1,
-      media: <CustomImage
-         image='https://i.pinimg.com/736x/64/76/c4/6476c44d20118215c301c92ba5166d72.jpg'
-         width='100%'
-         height='150px'
-      />,
+      media: '',
       link: '',
    }
 ]
