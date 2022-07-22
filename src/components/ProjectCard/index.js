@@ -1,11 +1,17 @@
 import * as S from './style'
 
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
+import { useState } from 'react'
 
-export const ProjectCard = ({ project, handleOnHover }) => {
+export const ProjectCard = ({ project }) => {
+   const [hover, setHover] = useState(false)
+
+   const handleOnHover = () => {
+      setHover(!hover)
+   }
+
    return (
       <S.Card key={project.id}>
-
          <S.CardTitleContent>
             {project.icon}
             <S.CardTitle>{project.title}</S.CardTitle>
@@ -13,11 +19,11 @@ export const ProjectCard = ({ project, handleOnHover }) => {
 
          <S.CardDescription>{project.description}</S.CardDescription>
          <S.CardButton
-            onMouseEnter={() => handleOnHover(project.id)}
-            onMouseLeave={() => handleOnHover(project.id)}
+            onMouseEnter={() => handleOnHover()}
+            onMouseLeave={() => handleOnHover()}
          >
             {project.buttonLabel}
-            {project.onHover ? <AiFillEye /> : <AiFillEyeInvisible />}
+            {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
          </S.CardButton>
       </S.Card>
    )

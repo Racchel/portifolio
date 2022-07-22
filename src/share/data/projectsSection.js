@@ -68,7 +68,6 @@ function createObjectByLanguage(arrayOfTextualDataByLanguage, commonDataArray) {
          id: textualData.id,
          title: textualData.title,
          description: textualData.description,
-         onHover: false,
          icon: commonDataArray[commonDataIndex].icon,
          link: commonDataArray[commonDataIndex].link,
          buttonLabel: 'ver projeto'

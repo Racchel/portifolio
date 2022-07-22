@@ -1,24 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../../share'
 import { CustomCarrosel, CustomListCards } from '..'
 import * as S from './style'
 
 export const ProjectsSection = () => {
    const { projectsSectionData } = useContext(AppContext)
-   const [projectsList, setProjectsList] = useState(projectsSectionData.projects)
-
-
-   useEffect(() => {
-      setProjectsList(projectsSectionData.projects)
-   }, [projectsSectionData])
-
-
-   function toggleOnHover(id) {
-      const newProjectsList = [...projectsList]
-      const index = newProjectsList.findIndex(project => project.id === id)
-      newProjectsList[index].onHover = !newProjectsList[index].onHover
-      setProjectsList(newProjectsList)
-   }
 
    return (
       <AppContext.Consumer>
@@ -26,12 +12,10 @@ export const ProjectsSection = () => {
             <S.ProjectsContainer>
                <S.ProjectsContent>
                   <CustomCarrosel
-                     projectsList={projectsList}
-                     handleOnHover={toggleOnHover}
+                     projectsList={projectsSectionData.projects}
                   />
                   <CustomListCards
-                     projectsList={projectsList}
-                     handleOnHover={toggleOnHover}
+                     projectsList={projectsSectionData.projects}
                   />
                </S.ProjectsContent>
                <S.ProjectsDescription>{context.projectsSectionData.description}</S.ProjectsDescription>

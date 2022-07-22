@@ -2,7 +2,7 @@ import Carousel from 'react-elastic-carousel';
 import * as S from './style'
 import { ProjectCard } from '..'
 
-export const CustomCarrosel = ({ projectsList, handleOnHover, }) => {
+export const CustomCarrosel = ({ projectsList }) => {
 
    const breakpoints = [
       { width: 1, itemsToShow: 1 },
@@ -19,7 +19,6 @@ export const CustomCarrosel = ({ projectsList, handleOnHover, }) => {
                <ProjectCard
                   key={project.id}
                   project={project}
-                  handleOnHover={handleOnHover}
                />
             ))}
          </Carousel>
