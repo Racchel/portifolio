@@ -8,6 +8,7 @@ export const CustomListCards = ({ dataList }) => {
             <Card
                key={data.id}
                data={data}
+               buttonType='link'
             />
          ))}
       </S.CardContainer>

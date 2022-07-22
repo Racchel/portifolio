@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import * as S from './style'
-import { ButtonExternalLink } from '..'
+import { ButtonExternalLink, ButtonRouter } from '..'
 
-export const Card = ({ data, mediaPosition = 'top', gap, subtitle }) => {
+export const Card = ({ data, mediaPosition = 'top', gap, subtitle, buttonType }) => {
    const [hover, setHover] = useState(false)
 
    const handleOnHover = () => {
@@ -34,13 +34,25 @@ export const Card = ({ data, mediaPosition = 'top', gap, subtitle }) => {
             data.media
          )}
 
-         <ButtonExternalLink
-            link={data.link}
-            onHover={handleOnHover}
-         >
-            {data.buttonLabel}
-            {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
-         </ButtonExternalLink>
+         {buttonType === 'link' && (
+            <ButtonExternalLink
+               link={data.link}
+               onHover={handleOnHover}
+            >
+               {data.buttonLabel}
+               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </ButtonExternalLink>
+         )}
+
+         {buttonType === 'router' && (
+            <ButtonRouter
+               to={data.link}
+               onHover={handleOnHover}
+            >
+               {data.buttonLabel}
+               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </ButtonRouter>
+         )}
       </S.Card>
    )
 }

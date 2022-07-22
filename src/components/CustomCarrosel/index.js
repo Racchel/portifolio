@@ -19,6 +19,7 @@ export const CustomCarrosel = ({ dataList }) => {
                <Card
                   key={project.id}
                   data={project}
+                  buttonType='link'
                />
             ))}
          </Carousel>

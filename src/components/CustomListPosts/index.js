@@ -14,6 +14,7 @@ export const CustomListPosts = ({
                data={data}
                gap={cardGap}
                mediaPosition={cardMediaPosition}
+               buttonType='router'
             />
          ))}
       </S.CardContainer>

@@ -1,6 +1,6 @@
 import * as S from './style'
 import { NavBar, SideBar, ThemeButton, Footer } from '../../components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const Layout = ({ navMenu, children }) => {
    const [isOpen, setIsOpen] = useState(false)
@@ -8,6 +8,10 @@ export const Layout = ({ navMenu, children }) => {
    const toggle = () => {
       setIsOpen(!isOpen)
    }
+
+   useEffect(() => {
+      document.documentElement.scrollTop = 0
+   }, [])
 
    return (
       <>
