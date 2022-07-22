@@ -1,9 +1,9 @@
 import * as S from './style'
 
-export const Button = ({ to, primary, big, onHover, children }) => {
+export const ButtonScroll = ({ to, primary, big, onHover, children }) => {
 
    return (
-      <S.ButtonContainer
+      <S.ButtonScrollContainer
          to={to}
          smooth={true}
          duration={500}
@@ -17,6 +17,26 @@ export const Button = ({ to, primary, big, onHover, children }) => {
          onMouseLeave={onHover}
 
 
-      >{children}</S.ButtonContainer>
+      >{children}</S.ButtonScrollContainer>
+   )
+}
+
+export const ButtonRouter = ({ to, children }) => {
+   return (
+      <S.ButtonRouterContainer href={to}>
+         {children}
+      </S.ButtonRouterContainer>
+   )
+}
+
+export const ButtonExternalLink = ({ link, children, onHover }) => {
+   return (
+      <S.ButtonExternalLinkContainer
+         href={link}
+         onMouseEnter={() => onHover()}
+         onMouseLeave={() => onHover()}
+      >
+         {children}
+      </S.ButtonExternalLinkContainer>
    )
 }

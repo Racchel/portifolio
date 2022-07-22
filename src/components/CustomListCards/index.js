@@ -1,13 +1,13 @@
 import * as S from './style'
-import { ProjectCard } from '..'
+import { Card } from '..'
 
-export const CustomListCards = ({ projectsList }) => {
+export const CustomListCards = ({ dataList }) => {
    return (
       <S.CardContainer>
-         {projectsList.map((project) => (
-            <ProjectCard
-               key={project.id}
-               project={project}
+         {dataList.map((data) => (
+            <Card
+               key={data.id}
+               data={data}
             />
          ))}
       </S.CardContainer>

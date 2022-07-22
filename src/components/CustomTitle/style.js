@@ -2,17 +2,27 @@ import styled from 'styled-components'
 import { assets } from '../../assets'
 
 export const Title = styled.h2`   
-   margin-bottom: 1.5rem;
-   font-family: ${props => props.theme.fonts.secondary};
-   padding-bottom: 5px;
-   border-bottom: 2px solid ${props => props.theme.colors.primary.sm};
-   font-size: 3rem;
    line-height: 1.1;
    font-weight: 400;
-   color: ${props => props.light
-      ? props.theme.colors.text.sm
-      : props.theme.colors.text.md
+   font-size: ${props => props.sizeDefault};
+   color: ${props => props.color};
+   font-family: ${props => props.theme.fonts.secondary};
+   
+   border-bottom: ${props => props.borderBottom
+      ? `2px solid ${props.theme.colors.primary.sm}`
+      : ''
    };
+   border-top: ${props => props.borderTop
+      ? `2px solid ${props.theme.colors.primary.sm}`
+      : ''
+   };
+
+
+   margin-bottom: ${props => props.borderBottom ? '1.5rem' : 0} ;
+   margin-top: ${props => props.borderTop ? '1.5rem' : 0} ;
+   
+   padding-bottom:  ${props => props.borderBottom ? '5px' : 0} ;
+   padding-bottom:  ${props => props.borderTop ? '5px' : 0} ;
 
    ::after {
       position: absolute;
@@ -22,7 +32,7 @@ export const Title = styled.h2`
    }
 
    @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
-      font-size: 2rem;
+      font-size:  ${props => props.sizeMobile};
    }
 
 `

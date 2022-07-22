@@ -1,34 +1,21 @@
 import * as S from './style'
-import { AppContext } from '../../share'
+import { SidebarMenu } from './SidebarMenu'
 import { ThemeButton, SocialMediaSection, LanguageSelector } from '..'
 
 export const SideBar = ({ isOpen, toggle }) => {
 
    return (
-      <AppContext.Consumer>
-         {context => (
-            <S.SideBarContainer isOpen={isOpen} >
-               <S.Icon onClick={toggle}>
-                  <S.CloseIcon />
-               </S.Icon>
-               <S.SidebarWrapper>
 
-                  <LanguageSelector />
-                  <S.SidebarMenu>
-                     {context.navigationListLinks.map((link, index) => (
-                        <S.SidebarLink
-                           key={index}
-                           to={link.to}
-                           onClick={toggle}
-                        >{link.title}</S.SidebarLink>
-                     ))}
-                  </S.SidebarMenu>
-
-                  <SocialMediaSection bigFont />
-                  <ThemeButton />
-               </S.SidebarWrapper>
-            </S.SideBarContainer>
-         )}
-      </AppContext.Consumer>
+      <S.SideBarContainer isOpen={isOpen} >
+         <S.Icon onClick={toggle}>
+            <S.CloseIcon />
+         </S.Icon>
+         <S.SidebarContent>
+            <LanguageSelector />
+            <SidebarMenu toggle={toggle} />
+            <SocialMediaSection bigFont />
+            <ThemeButton />
+         </S.SidebarContent>
+      </S.SideBarContainer>
    )
 }

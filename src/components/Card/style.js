@@ -30,21 +30,3 @@ export const CardTitle = styled.h3`
 export const CardDescription = styled.p`
    font-size: 1rem;
 `
-
-export const CardButton = styled.a`
-   background-color: ${props => props.theme.colors.black};
-   color: ${props => props.theme.colors.white};
-   border: none;
-   padding: 10px;
-   border-radius: 20px;
-   font-size: 1rem;
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 10px;
-
-   &:hover {
-      background-color: ${props => props.theme.colors.primary.md};
-   }
-`

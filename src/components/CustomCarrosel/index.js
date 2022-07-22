@@ -1,8 +1,8 @@
 import Carousel from 'react-elastic-carousel';
 import * as S from './style'
-import { ProjectCard } from '..'
+import { Card } from '..'
 
-export const CustomCarrosel = ({ projectsList }) => {
+export const CustomCarrosel = ({ dataList }) => {
 
    const breakpoints = [
       { width: 1, itemsToShow: 1 },
@@ -15,10 +15,10 @@ export const CustomCarrosel = ({ projectsList }) => {
          <Carousel
             breakPoints={breakpoints}
          >
-            {projectsList.map((project) => (
-               <ProjectCard
+            {dataList.map((project) => (
+               <Card
                   key={project.id}
-                  project={project}
+                  data={project}
                />
             ))}
          </Carousel>

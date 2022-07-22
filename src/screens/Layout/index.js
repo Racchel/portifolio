@@ -2,7 +2,7 @@ import * as S from './style'
 import { NavBar, SideBar, ThemeButton, Footer } from '../../components'
 import { useState } from 'react'
 
-export const Layout = ({ title, children }) => {
+export const Layout = ({ navMenu, children }) => {
    const [isOpen, setIsOpen] = useState(false)
 
    const toggle = () => {
@@ -12,7 +12,7 @@ export const Layout = ({ title, children }) => {
    return (
       <>
          <S.Container>
-            <NavBar toggle={toggle} />
+            <NavBar toggle={toggle} navMenu={navMenu} />
             <SideBar isOpen={isOpen} toggle={toggle} />
             {children}
          </S.Container>

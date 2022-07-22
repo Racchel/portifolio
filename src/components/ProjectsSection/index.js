@@ -12,10 +12,10 @@ export const ProjectsSection = () => {
             <S.ProjectsContainer>
                <S.ProjectsContent>
                   <CustomCarrosel
-                     projectsList={projectsSectionData.projects}
+                     dataList={projectsSectionData.projects}
                   />
                   <CustomListCards
-                     projectsList={projectsSectionData.projects}
+                     dataList={projectsSectionData.projects}
                   />
                </S.ProjectsContent>
                <S.ProjectsDescription>{context.projectsSectionData.description}</S.ProjectsDescription>

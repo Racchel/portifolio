@@ -15,7 +15,14 @@ export const TextCard = ({
       <S.TextCardContainer imgStart={imgStart}>
          <S.TextContent>
             <S.TopLine>{topLine}</S.TopLine>
-            <CustomTitle light={light} title={headLine} />
+            <CustomTitle
+               light={light}
+               title={headLine}
+               borderBottom
+               sizeDefault='3rem'
+               sizeMobile='2rem'
+            />
+
             {description.map(item => (
                <S.InfoDescription light={light}>{item}</S.InfoDescription>
             ))}

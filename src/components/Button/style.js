@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { Link as LinkScroll } from 'react-scroll'
+import { Link as LinkRouter } from 'react-router-dom'
 
-export const ButtonContainer = styled(LinkScroll)`
+
+export const ButtonScrollContainer = styled(LinkScroll)`
    border-radius: 50px;
    white-space: nowrap;
    background-color: ${(props) => props.primary
@@ -30,3 +32,23 @@ export const ButtonContainer = styled(LinkScroll)`
    }
 `
 
+export const ButtonRouterContainer = styled(LinkRouter)``
+
+export const ButtonExternalLinkContainer = styled.a`
+   background-color: ${props => props.theme.colors.black};
+   color: ${props => props.theme.colors.white};
+   border: none;
+   padding: 10px;
+   border-radius: 20px;
+   font-size: 1rem;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   text-decoration: none;
+
+   &:hover {
+      background-color: ${props => props.theme.colors.primary.md};
+   }
+`

@@ -29,32 +29,32 @@ const textualDataEn = [
 const commonData = [
    {
       id: 1,
-      icon: <AiFillCalculator />,
+      media: <AiFillCalculator />,
       link: ''
    },
    {
       id: 2,
-      icon: <BsFillStopwatchFill />,
+      media: <BsFillStopwatchFill />,
       link: ''
    },
    {
       id: 3,
-      icon: <AiFillPlusCircle />,
+      media: <AiFillPlusCircle />,
       link: ''
    },
    {
       id: 4,
-      icon: <MdPets />,
+      media: <MdPets />,
       link: ''
    },
    {
       id: 5,
-      icon: <ImTarget />,
+      media: <ImTarget />,
       link: ''
    },
    {
       id: 6,
-      icon: <RiSwordFill />,
+      media: <RiSwordFill />,
       link: ''
    }
 ]
@@ -68,7 +68,7 @@ function createObjectByLanguage(arrayOfTextualDataByLanguage, commonDataArray) {
          id: textualData.id,
          title: textualData.title,
          description: textualData.description,
-         icon: commonDataArray[commonDataIndex].icon,
+         media: commonDataArray[commonDataIndex].media,
          link: commonDataArray[commonDataIndex].link,
          buttonLabel: 'ver projeto'
       }

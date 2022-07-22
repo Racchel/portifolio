@@ -6,8 +6,8 @@ export const Home = () => {
    return (
       <AppContext.Consumer>
          {context => (
-            <Layout title='Home'>
-               <HeroSection />
+            <Layout title='Home' navMenu>
+               <HeroSection data={context.heroSectionData} />
                <InfoSection id='about'>
                   <TextCard {...context.infoSectionData.about} />
                   <TechCard />
