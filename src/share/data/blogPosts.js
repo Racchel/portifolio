@@ -1,5 +1,4 @@
-import { CustomImage } from '../../components'
-
+// import { CustomImage } from '../../components'
 
 const textualDataPT = [
    {
