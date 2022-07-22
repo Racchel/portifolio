@@ -8,7 +8,7 @@ export const ButtonScroll = ({ to, primary, big, onHover, children }) => {
          smooth={true}
          duration={500}
          spy={true}
-         exact='true'
+         exact
          offset={-80}
 
          primary={primary}
@@ -24,18 +24,18 @@ export const ButtonScroll = ({ to, primary, big, onHover, children }) => {
 export const ButtonRouter = ({
    primary, to, children,
    width,
-   widthLg,
-   widthMd,
-   widthSm,
+   widthlg,
+   widthmd,
+   widthsm,
 }) => {
    return (
       <S.ButtonRouterContainer
          to={to}
          primary={primary}
          width={width}
-         widthLg={widthLg}
-         widthMd={widthMd}
-         widthSm={widthSm}
+         widthlg={widthlg}
+         widthmd={widthmd}
+         widthsm={widthsm}
       >
          {children}
       </S.ButtonRouterContainer>

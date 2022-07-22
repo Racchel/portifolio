@@ -54,13 +54,13 @@ export const ButtonRouterContainer = styled(LinkRouter)`
    text-decoration: none;
 
    @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
-      width: ${props => props.widthLg};
+      width: ${props => props.widthlg};
    }
    @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-      width: ${props => props.widthMd};
+      width: ${props => props.widthmd};
    }
    @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
-      width: ${props => props.widthSm};
+      width: ${props => props.widthsm};
    }
 
    &:hover {

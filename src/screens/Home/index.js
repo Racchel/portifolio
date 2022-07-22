@@ -20,7 +20,7 @@ export const Home = () => {
                   <TextCard {...context.infoSectionData.about} />
                   <TechCard />
                </InfoSection>
-               <InfoSection id='projects' light={true}>
+               <InfoSection id='projects' light>
                   <TextCard {...context.infoSectionData.projects} />
                   <ProjectsSection />
                </InfoSection>
@@ -29,7 +29,7 @@ export const Home = () => {
                   <Box>
                      <ButtonRouter
                         width='200px'
-                        widthLg='100%'
+                        widthlg='100%'
                         primary to='/blog'
                      >Ir para blog</ButtonRouter>
                   </Box>

@@ -23,8 +23,8 @@ export const TextCard = ({
                sizeMobile='2rem'
             />
 
-            {description.map(item => (
-               <S.InfoDescription light={light}>{item}</S.InfoDescription>
+            {description.map((item, index) => (
+               <S.InfoDescription key={index} light={light}>{item}</S.InfoDescription>
             ))}
          </S.TextContent>
          <S.ImgContent>
