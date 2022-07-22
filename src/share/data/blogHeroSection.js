@@ -1,5 +1,6 @@
 import { assets } from '../../assets'
 
+
 const textualDataPT = {
    title: 'Seja a mudança que você quer ver no mundo.',
    subtitle: 'Mahatma Gandhi',

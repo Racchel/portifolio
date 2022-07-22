@@ -38,6 +38,7 @@ export const AppContextProvider = ({ children }) => {
          blogHeroSectionData: data.blogHeroSection,
          infoSectionData: data.infoSection,
          projectsSectionData: data.projectsSection,
+         blogPostsData: data.blogPosts,
          footerData: data.footer,
          themeName: theme === AppTheme.light ? data.theme.light : data.theme.dark
 
