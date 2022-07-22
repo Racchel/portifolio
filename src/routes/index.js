@@ -3,7 +3,7 @@ import {
    Route
 } from 'react-router-dom';
 
-import { Home, Blog } from '../screens'
+import { Home, Blog, PostByID } from '../screens'
 
 export const AppRoutes = () => {
    return (
@@ -12,6 +12,8 @@ export const AppRoutes = () => {
          <Route path='/about' element={<p>Sobre</p>} />
          <Route path='/projects' element={<p>Projetos</p>} />
          <Route path='/blog' element={<Blog />} />
+         <Route path='/blog/post/:id' element={<PostByID />} />
+
          <Route path='*' element={<p>Não encontrado</p>} />
       </Routes>
    )

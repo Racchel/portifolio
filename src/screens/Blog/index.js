@@ -1,15 +1,8 @@
 import { Layout } from '../Layout'
 import { HeroSection, InfoSection, CustomListPosts } from '../../components'
 import { AppContext } from '../../share'
-import { useEffect } from 'react'
 
 export const Blog = ({ post }) => {
-
-   useEffect(() => {
-      document.documentElement.scrollTop = 0
-   }, [])
-
-
    return (
       <AppContext.Consumer>
          {context => (

@@ -29,7 +29,7 @@ const commonData = [
    {
       id: 1,
       media: '',
-      link: '',
+      link: '/blog/post/1',
    }
 ]
 
