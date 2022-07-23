@@ -8,6 +8,8 @@ export const CustomListCards = ({ dataList }) => {
             <Card
                key={data.id}
                data={data}
+               mediaPosition='top'
+               mediaType={data.mediaType}
                buttonType='link'
             />
          ))}

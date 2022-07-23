@@ -21,7 +21,7 @@ export const HeroSection = ({ data }) => {
             <S.HeroBtnWrapper to={data.link}>
                <ButtonScroll
                   to={data.link}
-                  primary
+                  primary='true'
                   onHover={onHover}
                >  {data.buttonLabel}
                   {hover ? <S.ArrowForward /> : <S.ArrowRight />}

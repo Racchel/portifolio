@@ -15,10 +15,11 @@ export const CustomCarrosel = ({ dataList }) => {
          <Carousel
             breakPoints={breakpoints}
          >
-            {dataList.map((project) => (
+            {dataList.map((data) => (
                <Card
-                  key={project.id}
-                  data={project}
+                  key={data.id}
+                  data={data}
+                  mediaType={data.mediaType}
                   buttonType='link'
                />
             ))}

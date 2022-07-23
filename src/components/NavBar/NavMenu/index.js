@@ -15,7 +15,7 @@ export const NavMenu = () => {
                         smooth={true}
                         duration={500}
                         spy={true}
-                        exact
+                        exact='true'
                         offset={-80}
                      >
                         {link.title}

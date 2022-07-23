@@ -8,7 +8,7 @@ export const ButtonScroll = ({ to, primary, big, onHover, children }) => {
          smooth={true}
          duration={500}
          spy={true}
-         exact
+         exact='true'
          offset={-80}
 
          primary={primary}
@@ -27,6 +27,7 @@ export const ButtonRouter = ({
    widthlg,
    widthmd,
    widthsm,
+   onHover
 }) => {
    return (
       <S.ButtonRouterContainer
@@ -36,6 +37,8 @@ export const ButtonRouter = ({
          widthlg={widthlg}
          widthmd={widthmd}
          widthsm={widthsm}
+         onMouseEnter={() => onHover()}
+         onMouseLeave={() => onHover()}
       >
          {children}
       </S.ButtonRouterContainer>

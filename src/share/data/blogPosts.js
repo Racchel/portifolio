@@ -1,4 +1,3 @@
-// import { CustomImage } from '../../components'
 
 const textualDataPT = [
    {
@@ -28,7 +27,12 @@ const textualDataEn = [
 const commonData = [
    {
       id: 1,
-      media: '',
+      mediaType: 'image',
+      media: {
+         width: '100%',
+         height: '150px',
+         image: 'https://i.pinimg.com/736x/64/76/c4/6476c44d20118215c301c92ba5166d72.jpg'
+      },
       link: '/blog/post/1',
    }
 ]
@@ -45,6 +49,7 @@ function createObjectByLanguage(arrayOfTextualDataByLanguage, commonDataArray) {
          description: textualData.description,
          buttonLabel: textualData.buttonLabel,
          media: commonDataArray[commonDataIndex].media,
+         mediaType: commonDataArray[commonDataIndex].mediaType,
          link: commonDataArray[commonDataIndex].link
       }
    })

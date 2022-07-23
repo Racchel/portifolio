@@ -52,6 +52,8 @@ export const ButtonRouterContainer = styled(LinkRouter)`
    justify-content: center;
    gap: 10px;
    text-decoration: none;
+   transition: all 0.2s ease-in-out;
+
 
    @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
       width: ${props => props.widthlg};
@@ -64,7 +66,7 @@ export const ButtonRouterContainer = styled(LinkRouter)`
    }
 
    &:hover {
-      background-color: ${props => props.theme.colors.primary.md};
+      background-color: ${(props) => props.theme.colors.primary.lg};
    }
 `
 
@@ -81,6 +83,7 @@ export const ButtonExternalLinkContainer = styled.a`
    justify-content: center;
    gap: 10px;
    text-decoration: none;
+   transition: all 0.2s ease-in-out;
 
    &:hover {
       background-color: ${props => props.theme.colors.primary.md};

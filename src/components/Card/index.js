@@ -1,13 +1,54 @@
 import { useState } from 'react'
-import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import * as S from './style'
-import { ButtonExternalLink, ButtonRouter } from '..'
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
+import { ButtonExternalLink, ButtonRouter, CustomImage } from '..'
 
-export const Card = ({ data, mediaPosition = 'top', gap, subtitle, buttonType }) => {
+export const Card = ({ data, mediaPosition = 'top', mediaType = 'icon', gap, subtitle, buttonType }) => {
    const [hover, setHover] = useState(false)
 
-   const handleOnHover = () => {
-      setHover(!hover)
+   const handleOnHover = () => setHover(!hover)
+
+   function getMediaType() {
+      if (mediaType === 'icon') {
+         return data.media
+      }
+
+      if (mediaType === 'image') {
+         return (
+            <CustomImage
+               width={data.media.width}
+               height={data.media.height}
+               image={data.media.image}
+            />
+         )
+      }
+   }
+
+   function getButtonType() {
+      if (buttonType === 'link') {
+         return (
+            <ButtonExternalLink
+               link={data.link}
+               onHover={handleOnHover}
+            >
+               {data.buttonLabel}
+               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </ButtonExternalLink>
+         )
+      }
+
+      if (buttonType === 'router') {
+         return (
+            <ButtonRouter
+               to={data.link}
+               onHover={handleOnHover}
+               primary='true'
+            >
+               {data.buttonLabel}
+               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
+            </ButtonRouter>
+         )
+      }
    }
 
    return (
@@ -18,41 +59,17 @@ export const Card = ({ data, mediaPosition = 'top', gap, subtitle, buttonType })
                <S.CardSubtitle>{data?.subtitle}</S.CardSubtitle>
             )}
 
-            {mediaPosition === 'top' && (
-               data.media
-            )}
+            {mediaPosition === 'top' && getMediaType()}
             <S.CardTitle>{data.title}</S.CardTitle>
          </S.CardTitleContent>
 
-         {mediaPosition === 'middle' && (
-            data.media
-         )}
+         {mediaPosition === 'middle' && getMediaType()}
 
          <S.CardDescription>{data.description}</S.CardDescription>
 
-         {mediaPosition === 'bottom' && (
-            data.media
-         )}
+         {mediaPosition === 'bottom' && getMediaType()}
 
-         {buttonType === 'link' && (
-            <ButtonExternalLink
-               link={data.link}
-               onHover={handleOnHover}
-            >
-               {data.buttonLabel}
-               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
-            </ButtonExternalLink>
-         )}
-
-         {buttonType === 'router' && (
-            <ButtonRouter
-               to={data.link}
-               onHover={handleOnHover}
-            >
-               {data.buttonLabel}
-               {hover ? <AiFillEye /> : <AiFillEyeInvisible />}
-            </ButtonRouter>
-         )}
+         {getButtonType()}
       </S.Card>
    )
 }

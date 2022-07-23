@@ -38,6 +38,7 @@ export const AppTheme = {
    light: {
       colors: {
          white: themeColors.basic.xs,
+         gray: themeColors.basic.sm,
          black: themeColors.basic.xl,
          background: {
             sm: themeColors.basic.sm,
@@ -56,6 +57,7 @@ export const AppTheme = {
    dark: {
       colors: {
          white: themeColors.basic.xs,
+         gray: themeColors.basic.sm,
          black: themeColors.basic.xl,
          background: {
             sm: themeColors.basic.lg,
